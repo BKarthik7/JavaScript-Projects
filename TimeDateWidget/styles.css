@@ -75,3 +75,15 @@ body{
 .date-container span{
     font-size: 2.5em;
 }
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 2em;
+    color: #fff;
+    background-color: #1e90ff;
+    border-radius: 0.5em;
+}

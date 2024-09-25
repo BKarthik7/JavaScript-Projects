@@ -2,6 +2,8 @@ let dateContainer = document.querySelector(".date-container");
 let hoursContainer = document.querySelector(".hours");
 let minutesContainer = document.querySelector(".minutes");
 let secondsContainer = document.querySelector(".seconds");
+let loader = document.querySelector(".loader");
+let clockContainer = document.querySelector(".clock-container");
 
 const weekDays = [
     "Sunday",
@@ -44,7 +46,12 @@ function updateClock() {
     dateContainer.innerHTML = `<p>${day}</p><p><span>${date}</span></p><p>${month}</p>`;
     hoursContainer.textContent = hours + " :";
     minutesContainer.textContent = minutes + " :";
-    secondsContainer.textContent = seconds;
+    secondsContainer.textContent = seconds + " ;";
+
+    loader.style.display = "none";
+    clockContainer.style.display = "flex";
+    dateContainer.style.display = "block";
 }
 
+updateClock();
 setInterval(updateClock, 1000);
